@@ -45,7 +45,7 @@ public class DemoService {
     @HystrixCommand(commandKey = "domeHystrix", groupKey = "domeGroup", threadPoolKey = "domeHystrixThread")
     public String domeFallBack(Throwable throwable){
         logger.info(throwable.getMessage());
-        return "error";
+        return "error hystrix";
     }
 
     /**
